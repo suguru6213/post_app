@@ -6,13 +6,17 @@
 </p>
 
 <p>
-  <strong>Author:</strong>
-  <%= @article.author %>
+  <strong>Date:</strong>
+  <%= l @article.created_at, format: :short %>
 </p>
 
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
+</p>
+<p>
+  <strong>Link:</strong>
+  <a href="<%= @article.link %>">リンク先</a>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
