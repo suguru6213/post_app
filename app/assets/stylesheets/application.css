@@ -15,6 +15,13 @@
  */
 
 
-.post{
-  text-decoration: none;
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+
+.page-item.active .page-link {
+  background: none;
+
 }
