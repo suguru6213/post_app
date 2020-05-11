@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
+  before_action :move_to_index, except: :index
   # GET /articles
   # GET /articles.json
   def index
@@ -75,5 +75,9 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :link, :text)
+    end
+
+    def move_to_index
+      redirect_to action: :index unless user_signed_in?
     end
 end

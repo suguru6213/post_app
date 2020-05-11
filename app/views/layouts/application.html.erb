@@ -41,13 +41,13 @@
         </button>
         <div id="menu" class="d-sm-none collapse navbar-collapse pb-4 mt-3">
           <ul class="navbar-nav d-sm-none">
-            <li class="nav-item text-center"><a href="" class="nav-link">TOP</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">PROFILE</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">INFORMATION</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">MUSIC</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">GOODS</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">TWITTER</a></li>
-            <li class="nav-item text-center"><a href="" class="nav-link">INSTAGRAM</a></li>
+            <li class="nav-item text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
+            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>PROFILE<% end %></li>
+            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>INFORMATION<% end %></li>
+            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>MUSIC<% end %></li>
+            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>GOODS<% end %></li>
+            <li class="nav-item text-center"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
+            <li class="nav-item text-center"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
           </ul>
         </div>
       </nav>
@@ -99,8 +99,10 @@
 <div class="embed-responsive embed-responsive-21by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h1TTH0v22SE" allowfullscreen></iframe>
 </div>
-
-<a href="https://twitter.com/1230Vecken" class="offset-5"><img src="assets/Twitter_Social_Icon_Rounded_Square_Color.png" alt="" class="col-2 m-2 mt-4"></a>
+<div class="row　d-flex offset-4">
+<a href="https://twitter.com/1230Vecken" class=""><img src="assets/Twitter_Social_Icon_Rounded_Square_Color.png" alt="" class="col-2 m-2 mt-4"></a>
+<a href="https://www.instagram.com/vecken_1230_/?hl=ja" class=""><img src="assets/Instagram_AppIcon.png" alt="" class="col-2 m-2 mt-4"></a>
+</div>
       <div class="row-12">
         <% if user_signed_in? %>
           <div class="col">
@@ -109,9 +111,8 @@
 
           </div>
         <% else %>
-          <div class="col float-right">
-           
-            <div class="hide">Copyright © 2020  <%= link_to new_user_session_path, class: 'seek' do %>Vecken.  <% end %> All Rights Reserved.</div>          
+          <div class="col float-right">   
+            <div class="hide">Copyright © 2020 <%= link_to new_user_session_path, class: 'seek' do %>Vecken.<% end %> All Rights Reserved.</div>          
           </div>
         <% end %>
         </div>
