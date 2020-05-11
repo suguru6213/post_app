@@ -4,10 +4,12 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.includes(:user).all.page(params[:page]).per(5)
+    @articles = Article.includes(:user).all.order("created_at DESC").page(params[:page]).per(5)
     @name = "Vecken"
     
   end
+
+  
 
   # GET /articles/1
   # GET /articles/1.json
