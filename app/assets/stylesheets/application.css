@@ -30,14 +30,14 @@
 }
 
 .navbar-brand {
-  font-size: 16px;
+  font-size: 10px;
   /* font-weight: bold; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
 }
 
 .header-nav {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .hide {
