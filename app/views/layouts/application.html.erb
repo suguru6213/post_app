@@ -19,27 +19,32 @@
   </head>
 <body>
   <header>
-    <div class="container border-bottom">
+    <div class="container">
       <div class="row">
-        <h2 class="col text-center pt-3 display-5">
-          Vecken
-        </div>
+        <h2 class="col-12 text-center pt-3 display-5">
+          Vecken</h2>
+        <div class="col-12 border-bottom d-sm-none">
       </div>
     </div>
-    <div class="container">
-      <nav class="navbar navbar-expand-sm navbar-light">
-        <a href="" class="navbar-brand ">INFO</a>
-        <a href="" class="navbar-brand">SCHEDULE</a>
-        <a href="" class="navbar-brand">PROFILE</a>
-        <a href="" class="navbar-brand">MUSIC</a>
+    <div class="container header-nav">
+      <nav class="navbar row navbar-expand-sm navbar-light">
+        <a href="" class="navbar-brand col">INFO</a>
+        <a href="" class="navbar-brand col">SCHEDULE</a>
+        <a href="" class="navbar-brand col">PROFILE</a>
+        <a href="" class="navbar-brand col">MUSIC</a>
+        <a href="" class="navbar-brand col d-none d-sm-inline">GOODS</a>
+        <a href="" class="navbar-brand col d-none d-sm-inline">TWITTER</a>
+        <a href="" class="navbar-brand col d-none d-sm-inline">INSTAGRAM</a>
+        <a href="" class="navbar-brand col d-none d-sm-inline">MUSIC</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="menu" class="collapse navbar-collapse bg-light pb-4 mt-3">
-          <ul class="navbar-nav">
+        <div id="menu" class="d-sm-none collapse navbar-collapse pb-4 mt-3">
+          <ul class="navbar-nav d-sm-none">
             <li class="nav-item text-center"><a href="" class="nav-link">TOP</a></li>
             <li class="nav-item text-center"><a href="" class="nav-link">PROFILE</a></li>
             <li class="nav-item text-center"><a href="" class="nav-link">INFORMATION</a></li>
+            <li class="nav-item text-center"><a href="" class="nav-link">MUSIC</a></li>
             <li class="nav-item text-center"><a href="" class="nav-link">GOODS</a></li>
             <li class="nav-item text-center"><a href="" class="nav-link">TWITTER</a></li>
             <li class="nav-item text-center"><a href="" class="nav-link">INSTAGRAM</a></li>
@@ -96,6 +101,24 @@
 </div>
 
 <a href="https://twitter.com/1230Vecken" class="offset-5"><img src="assets/Twitter_Social_Icon_Rounded_Square_Color.png" alt="" class="col-2 m-2 mt-4"></a>
+      <div class="row-12">
+        <% if user_signed_in? %>
+          <div class="col">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <a class="" href="/articles/new">新規投稿</a>
+            <%= link_to 'New Article', new_article_path %>
+
+          </div>
+        <% else %>
+          <div class="col float-right">
+           
+            <div class="hide">Copyright © 2020  <%= link_to new_user_session_path, class: 'seek' do %>Vecken.  <% end %> All Rights Reserved.</div>
+            <div class="hide">Copyright © 2020  <%= link_to new_user_registration_path, class: 'seek' do %>Vecken.  <% end %> All Rights Reserved.</div>
+          
+          </div>
+        <% end %>
+        </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
