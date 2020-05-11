@@ -11,6 +11,9 @@
   <p class="card-text"><%= article.text %></p>
   </div></a>
 </div>
+  <% if user_signed_in?%>
+<%= link_to '編集', "/articles/#{article.id}/edit", method: :get %> 
+  <% end %>
   <% end %>
   <%= paginate(@articles) %>
   <div class="border border-light mb-3"></div>
