@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :profile, :goods, :schedule]
   # GET /articles
   # GET /articles.json
   def index
@@ -66,6 +66,15 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: '投稿を削除しました。' }
       format.json { head :no_content }
     end
+  end
+
+  def profile
+  end
+
+  def goods
+  end
+
+  def schedule
   end
 
   private

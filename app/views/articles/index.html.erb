@@ -1,5 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<%= image_tag 'vecken1.jpg',  class: "d-block w-100" %>    </div>
+    <div class="carousel-item">
+<%= image_tag 'vecken4.jpg',  class: "d-block w-100" %>     </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+  <h6 class="text-center border border-dark p-3 mt-3 col-5 offset-4">WHAT' NEW</h6>
+
+
+
 
 
   <% @articles.each do |article| %>
@@ -16,6 +38,18 @@
   <% end %>
   <% end %>
   <%= paginate(@articles) %>
+  
   <div class="border border-light mb-3"></div>  
 <br>
+
+  <h6 class="text-center border border-dark p-3 mt-3 col-5 offset-4">VIDEO</h6>
+</div>
+
+<div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/h1TTH0v22SE" allowfullscreen></iframe>
+</div>
+<div class="row　d-flex offset-4">
+<a href="https://twitter.com/1230Vecken" class=""><%= image_tag 'Twitter_Social_Icon_Rounded_Square_Color.png', class: "col-2 m-2 mt-4" %></a>
+<a href="https://www.instagram.com/vecken_1230_/?hl=ja" class=""><%= image_tag 'Instagram_AppIcon.png', class: "col-2 m-2 mt-4" %></a>
+</div>
 

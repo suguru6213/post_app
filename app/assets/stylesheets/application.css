@@ -60,3 +60,30 @@
     text-decoration: none;
     color: black;
 }
+
+.profile-font {
+  font-size: 12px;
+}
+
+.rap-font {
+  font-size: 10px;
+}
+
+.rap-link-font {
+    font-size: 15px;
+    color: aquamarine;
+}
+
+.live-content-font {
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.date-font {
+  font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.live-font {
+  font-size: 20px;
+}
