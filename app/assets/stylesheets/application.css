@@ -119,3 +119,15 @@ font-size: 12px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
+
+.music-head-font {
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #696969;
+  color: white;
+}
+
+.music_btn {
+  font-size: 4px;
+  text-align: center;
+}
