@@ -2,7 +2,7 @@
 lock "~> 3.11.2"
 
 set :application, "post_app"
-set :repo_url, "git@example.com:suguru6213/post_app.git"
+set :repo_url, "git@github.com:suguru6213/post_app.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :rbenv_type, :user
