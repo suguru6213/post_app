@@ -63,6 +63,7 @@
 
 .profile-font {
   font-size: 12px;
+
 }
 
 .rap-font {
@@ -86,4 +87,35 @@
 
 .live-font {
   font-size: 20px;
+}
+
+.bg-login-color {
+  background-color: whitesmoke;
+}
+
+
+.pass-forget-font {
+  text-decoration: none;
+  color: aqua;
+
+font-size: 12px;
+}
+
+.pass-forget-font:hover {
+  text-decoration: none;
+}
+
+.logout-new-font-color {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.bb-color {
+  color: #696969;
+}
+
+.song-font {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }

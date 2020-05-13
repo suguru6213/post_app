@@ -28,14 +28,15 @@
     </div>
     <div class="container header-nav">
       <nav class="navbar row navbar-expand-sm navbar-light">
-        <a href="" class="navbar-brand col-2 col-sm-1">INFO</a>
-        <a href="" class="navbar-brand col-2 col-sm-1">SCHEDULE</a>
+        <%= link_to info_path, class: 'navbar-brand col-2 col-sm-1' do %>INFO<% end %>
+        <%= link_to schedule_path, class: 'navbar-brand col-2 col-sm-1' do %>SCHEDULE<% end %>
         <%= link_to profile_path, class: 'navbar-brand col-2 col-sm-1' do %>PROFILE<% end %>
-        <a href="" class="navbar-brand col-2 col-sm-1">MUSIC</a>
+        <%= link_to music_path, class: 'navbar-brand col-2 col-sm-1' do %>MUSIC<% end %>
         <%= link_to goods_path, class: "navbar-brand col col-sm-1 d-none d-sm-inline" do %>GOODS<% end %>
-        <a href="" class="navbar-brand col col-sm-1 d-none d-sm-inline">TWITTER</a>
-        <a href="" class="navbar-brand col col-sm-1 d-none d-sm-inline">INSTAGRAM</a>
-        <a href="" class="navbar-brand col col-sm-1 d-none d-sm-inline">MUSIC</a>
+        <%= link_to 'https://twitter.com/1230Vecken', class: "navbar-brand col col-sm-1 d-none d-sm-inline" do %>TWITTER<% end %>
+        <%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: "navbar-brand col col-sm-1 d-none d-sm-inline" do %>INSTAGRAM<% end %>
+        <%= link_to 'https://instagram.com/vecken_1230_?igshid=g8dxf0i7fe4l', class: "navbar-brand col col-sm-1 d-none d-sm-inline" do %>IGTV<% end %>
+        <%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: "navbar-brand col col-sm-1 d-none d-sm-inline" do %>YOUTUBE<% end %>
         <button class="navbar-toggler col" data-toggle="collapse" data-target="#menu">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,34 +44,18 @@
           <ul class="navbar-nav d-sm-none">
             <li class="nav-item text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
             <li class="nav-item text-center"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
-            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>INFORMATION<% end %></li>
-            <li class="nav-item text-center"><%= link_to '#', class: 'nav-link' do %>MUSIC<% end %></li>
+            <li class="nav-item text-center"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
+            <li class="nav-item text-center"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
             <li class="nav-item text-center"><%= link_to goods_path, class: 'nav-link' do %>GOODS<% end %></li>
             <li class="nav-item text-center"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
             <li class="nav-item text-center"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
+            <li class="nav-item text-center"><%= link_to 'https://instagram.com/vecken_1230_?igshid=g8dxf0i7fe4l', class: 'nav-link' do %>IGTV<% end %></li>
+            <li class="nav-item text-center"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
-
-  <%# <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-<img src="assets/vecken1.jpg" alt="" class="d-block w-100">    </div>
-    <div class="carousel-item">
-<img src="assets/vecken4.jpg" alt="" class="d-block w-100">    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
- %>
 
  <%= yield %>
 
@@ -78,9 +63,7 @@
       <div class="row-12">
         <% if user_signed_in? %>
           <div class="col">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to 'New Article', new_article_path %>
-
+            <div class="hide">Copyright © 2020 Vecken. All Rights Reserved.</div>          
           </div>
         <% else %>
           <div class="col float-right">   

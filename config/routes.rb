@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'profile' => 'articles#profile'
   get 'goods' => 'articles#goods'
   get 'schedule' => 'articles#schedule'
+  get 'info' => 'articles#info'
+  get 'music' => 'articles#music'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

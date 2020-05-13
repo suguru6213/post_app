@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: [:index, :profile, :goods, :schedule]
+  before_action :move_to_index, except: [:index, :profile, :goods, :schedule, :info, :music]
   # GET /articles
   # GET /articles.json
   def index
@@ -75,6 +75,14 @@ class ArticlesController < ApplicationController
   end
 
   def schedule
+  end
+
+  def info
+    @articles = Article.includes(:user).all.order("created_at DESC").page(params[:page]).per(5)
+    @name = "Vecken"
+  end
+
+  def music
   end
 
   private
