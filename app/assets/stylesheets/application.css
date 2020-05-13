@@ -125,9 +125,44 @@ font-size: 12px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #696969;
   color: white;
+  font-size: 30px;
+}
+
+.header-condition {
+  padding-top: 118px; 
+
+}
+#song, #live, #beat, #cover {
+  margin-top: -118px; 
+padding-top: 118px; 
 }
 
 .music_btn {
   font-size: 4px;
   text-align: center;
 }
+
+
+.top-bar-font {
+  font-size: 6px;
+  color: black;
+}
+.top-bar-font:hover {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: black;
+}
+
+.title-font {
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  font-family:'Times New Roman', 'Georgia', 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  /* letter-spacing: 1px; */
+}
+.title-font:hover {
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+}
+
