@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, except: [:index, :profile, :goods, :schedule, :info, :music]
+  before_action :move_to_index, except: [:index, :profile, :goods, :schedule, :info, :music, :art, :vstyle]
   # GET /articles
   # GET /articles.json
   def index
@@ -83,6 +83,12 @@ class ArticlesController < ApplicationController
   end
 
   def music
+  end
+
+  def art
+  end
+
+  def vstyle
   end
 
   private

@@ -150,7 +150,6 @@ padding-top: 118px;
 }
 .top-bar-font:hover {
   text-decoration: none;
-  letter-spacing: 5px;
   color: black;
 }
 
@@ -179,3 +178,10 @@ padding-top: 118px;
     color: #fff;
     text-align: center;
   }
+
+.vstyle-font {
+  font-size: 13px;
+  background-color: teal;
+  color: #fff;
+  text-shadow: -1px -2px 3px black;
+}
