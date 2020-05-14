@@ -39,21 +39,22 @@
         <%= link_to 'https://twitter.com/1230Vecken', class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>TWITTER<% end %>
         <%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>INSTAGRAM<% end %>
         <%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: "navbar-brand col-sm-1 d-none d-sm-inline top-bar-font" do %>YOUTUBE<% end %>
-        <button class="navbar-toggler justify-content-between" data-toggle="collapse" data-target="#menu">
+        <button class="navbar-toggler" onclick="$('#menu').collapse('toggle')" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div id="menu" class="d-sm-none collapse navbar-collapse pb-4 mt-3">
           <ul class="navbar-nav d-sm-none">
-            <li class="nav-item text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
-            <li class="nav-item text-center"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
-            <li class="nav-item text-center"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
-            <li class="nav-item text-center"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
-            <li class="nav-item text-center"><%= link_to goods_path, class: 'nav-link' do %>JOB<% end %></li>
-            <li class="nav-item text-center"><%= link_to art_path, class: 'nav-link' do %>ART<% end %></li>
-            <li class="nav-item text-center"><%= link_to vstyle_path, class: 'nav-link' do %>STYLE<% end %></li>
-            <li class="nav-item text-center"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
-            <li class="nav-item text-center"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
-            <li class="nav-item text-center"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
+            <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
+            <li class="nav-link text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
+            <li class="nav-link text-center"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
+            <li class="nav-link text-center"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
+            <li class="nav-link text-center"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
+            <li class="nav-link text-center"><%= link_to goods_path, class: 'nav-link' do %>JOB<% end %></li>
+            <li class="nav-link text-center"><%= link_to art_path, class: 'nav-link' do %>ART<% end %></li>
+            <li class="nav-link text-center"><%= link_to vstyle_path, class: 'nav-link' do %>STYLE<% end %></li>
+            <li class="nav-link text-center"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
+            <li class="nav-link text-center"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
+            <li class="nav-link text-center"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
           </ul>
         </div>
       </nav>
