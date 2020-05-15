@@ -1,17 +1,18 @@
  <div class="border border-light mb-3"></div>  
 <br>
 
-  <h6 class="text-center border border-dark p-2 mt-2 col-5 mx-auto">ログイン</h6>
+  <h6 class="text-center border border-dark p-2 mt-2 col-5 mx-auto">SIGN IN</h6>
 </div>
+
 <div class="my-5 py-5 bg-login-color">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field offset-3">
-    <%= f.label :email %><br />
+    <!-- <%= f.label :email %> -->E-MAIL<br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-75" %>
   </div>
 
   <div class="field offset-3">
-    <%= f.label :password %><br />
+    <!-- <%= f.label :password %> --> PASSWORD<br />
     <%= f.password_field :password, autocomplete: "current-password", class: "w-50" %>
   </div>
 
@@ -23,7 +24,7 @@
   <% end %>
 
   <div class="actions offset-3">
-    <%= f.submit "ログイン", class: "bg-light" %>
+    <%= f.submit "SIGN IN", class: "bg-light" %>
   </div>
 <% end %>
 
