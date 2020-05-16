@@ -1,8 +1,21 @@
-<h1>Editing Article</h1>
+
+<h6 class="text-center p-2 mt-3 mb-4 col-5 mx-auto bg-success">
+    <div class="logout-new-font-color">編集</div>
+  </h6>
 
 <%= render 'form', article: @article %>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %> |
-<%= link_to '削除', "/articles/#{@article.id}", method: :delete %>
+<div class="d-flex justify-content-around ">
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-warning">
+    <div class=""><%= link_to 'Show', @article, class: "logout-new-font-color" %></div>
+  </h6>
 
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-primary">
+    <div class=""><%= link_to 'BACK', articles_path, class: "logout-new-font-color" %></div>
+  </h6>
+
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-danger">
+    <div class=""><%= link_to '削除', "/articles/#{@article.id}", method: :delete, class: "logout-new-font-color" %></div>
+  </h6>
+
+</div>

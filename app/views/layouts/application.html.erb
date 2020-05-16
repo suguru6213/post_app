@@ -45,7 +45,11 @@
         <div id="menu" class="d-sm-none collapse navbar-collapse pb-4 mt-3">
           <ul class="navbar-nav d-sm-none">
             <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
+          <% if user_signed_in? %>
+            <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>SIGN OUT<% end %></li>
+          <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
+          <% end %>
             <li class="nav-link text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
             <li class="nav-link text-center"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
             <li class="nav-link text-center"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
