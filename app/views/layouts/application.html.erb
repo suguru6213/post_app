@@ -50,16 +50,20 @@
           <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
           <% end %>
-            <li class="nav-link text-center"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
-            <li class="nav-link text-center"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
-            <li class="nav-link text-center"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
-            <li class="nav-link text-center"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
-            <li class="nav-link text-center"><%= link_to goods_path, class: 'nav-link' do %>JOB<% end %></li>
-            <li class="nav-link text-center"><%= link_to art_path, class: 'nav-link' do %>ART<% end %></li>
-            <li class="nav-link text-center"><%= link_to vstyle_path, class: 'nav-link' do %>STYLE<% end %></li>
-            <li class="nav-link text-center"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
-            <li class="nav-link text-center"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
-            <li class="nav-link text-center"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to goods_path, class: 'nav-link' do %>JOB<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to art_path, class: 'nav-link' do %>ART<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to vstyle_path, class: 'nav-link' do %>STYLE<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
+            <li class="nav-link text-center p-0"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
+          <% if user_signed_in? %>
+            <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>お問い合わせ<% end %></li>
+          <% end %>
+
           </ul>
         </div>
       </nav>
