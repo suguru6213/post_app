@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'art' => 'articles#art'
   get 'vstyle' => 'articles#vstyle'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :posts do
+    resources :comments, only: [:create]
+  end
+  resources :users, only: [:show]
 end
