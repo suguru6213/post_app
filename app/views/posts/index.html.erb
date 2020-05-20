@@ -7,6 +7,10 @@
 <div class="content_post" style="background-image: url(<%= post.image %>);">
 </div>
 <%= simple_format(post.text) %>
+<% if user_signed_in? && current_user.id == post.user_id %>
+<%= link_to "編集する", "/posts/#{post.id}/edit", method: :get %>
+<%= link_to "削除する", "/posts/#{post.id}", method: :delete %>
+<% end %>
 <% end %>
 <%= paginate(@posts)%>
 
