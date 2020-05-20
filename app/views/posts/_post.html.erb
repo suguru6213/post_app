@@ -1,0 +1,7 @@
+<div class="content_post" style="background-image: url(<%= post.image %>);">
+</div>
+<%= simple_format(post.text) %>
+<% if user_signed_in? && current_user.id == post.user_id %>
+<%= link_to "詳細", "/posts/#{post.id}", method: :get %>
+<%= link_to "編集", "/posts/#{post.id}/edit", method: :get %>
+<% end %>

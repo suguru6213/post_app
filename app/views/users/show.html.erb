@@ -1,9 +1,7 @@
 <div class="contents" >
   <p><%= @name %>さんの投稿一覧</p>
+  <a class="btn" href="/posts">投稿一覧へ戻る</a>
   <% @posts.each do |post| %>
-    <div class="content_post" style="background-image: url(<%= post.image %>);">
-    </div>
-      <%= simple_format(post.text) %>
-  <% end %>
+    <%= render partial: "posts/post", locals: { post: post } %>  <% end %>
   <%= paginate(@posts) %>
 </div>
