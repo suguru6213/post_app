@@ -15,10 +15,6 @@
  *= require font-awesome
  */
 
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-
 
 .pagination>li>a {          
   border: none;     /*枠線をなくす*/
