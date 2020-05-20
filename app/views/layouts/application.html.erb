@@ -27,7 +27,14 @@
       </div>
     </div>
     <div class="container header-nav">
-      <nav class="navbar  w-100 nav-justified navbar-expand-sm navbar-light offset-sm-1">
+      <nav class="navbar  w-100 nav-justified navbar-expand-sm navbar-light">
+        <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SIGN OUT<% end %>
+        <%= link_to posts_path, method: :get, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>VECKEN'S ROOM<% end %>
+        <% else %>
+        <%= link_to new_user_session_path, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %><%= fa_icon 'user' %><% end %>
+        <% end %>
+
         <%= link_to root_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>TOP<% end %>
         <%= link_to info_path, class: ' col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>INFO<% end %>
         <%= link_to schedule_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SCHEDULE<% end %>
@@ -72,8 +79,10 @@
   </header>
 
 <%= render 'layouts/notifications' %>
- <%= yield %>
+   <div class="post_wrapper">
 
+ <%= yield %>
+</div>
 
       <div class="row-12">
         <% if user_signed_in? %>

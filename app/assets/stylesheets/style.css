@@ -19,6 +19,14 @@ width: 250px;
   border-top: solid 0.02px white;
 }
 
+.mypage_name_top {
+  background-color: #003366;
+  padding: 10px;
+  border-top: solid 0.02px white;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
 .edit_top {
   background-color: #003366;
   padding: 10px;

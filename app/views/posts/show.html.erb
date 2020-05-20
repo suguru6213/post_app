@@ -16,9 +16,13 @@
   </span>
 </div>
 
+<% if @post[:image].present? %>
 <div class="image-center">
 <%= image_tag @post.image, class: "a" %>
 </div>
+
+<% else %>
+<% end %>
 
 <div class="post_text post-name-link">
 <%= fa_icon 'paragraph' %> <%= simple_format(@post.text, {}, wrapper_tag: "span") %> 
@@ -38,7 +42,7 @@
     <!-- ここからコメントフォーム -->
     <% if current_user %>
       <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: "comment_form") do %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="1" class="submit_btn"></textarea>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="1" class="submit_btn" required></textarea>
         <input type="submit" value="&#xf055;" class="fa fa-2x post-name-link comment_submit_btn">
       <% end %>
     <% end %>

@@ -1,23 +1,12 @@
+ <div class="post_wrapper">
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<div class="d-flex justify-content-around ">
+<h6 class="text-center p-2 mt-3 mb-4 col-3 mx-auto bg-success">
+    <div class=""><%= link_to 'EDIT', edit_article_path(@article), class: "logout-new-font-color" %></div>
+  </h6>
 
-<p>
-  <strong>Date:</strong>
-  <%= l @article.created_at, format: :short %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-<p>
-  <strong>Link:</strong>
-  <a href="<%= @article.link %>">リンク先</a>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-
+<h6 class="text-center p-2 mt-3 mb-4 col-3 mx-auto bg-primary">
+    <div class=""><%= link_to 'BACK', articles_path, class: "logout-new-font-color" %></div>
+  </h6>
+</div>
+</div>

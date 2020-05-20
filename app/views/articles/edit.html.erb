@@ -1,3 +1,4 @@
+ <div class="post_wrapper">
 
 <h6 class="text-center p-2 mt-3 mb-4 col-5 mx-auto bg-success">
     <div class="logout-new-font-color">編集</div>
@@ -6,16 +7,17 @@
 <%= render 'form', article: @article %>
 
 <div class="d-flex justify-content-around ">
-<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-warning">
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-3 my-sm-5 mx-auto bg-warning">
     <div class=""><%= link_to 'Show', @article, class: "logout-new-font-color" %></div>
   </h6>
 
-<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-primary">
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-3 my-sm-5 mx-auto bg-primary">
     <div class=""><%= link_to 'BACK', articles_path, class: "logout-new-font-color" %></div>
   </h6>
 
-<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-1 my-sm-5 mx-auto bg-danger">
+<h6 class="text-center p-2 mt-3 mb-4 col-3 col-sm-3 my-sm-5 mx-auto bg-danger">
     <div class=""><%= link_to '削除', "/articles/#{@article.id}", method: :delete, class: "logout-new-font-color" %></div>
   </h6>
 
+</div>
 </div>
