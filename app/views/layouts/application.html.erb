@@ -47,6 +47,7 @@
             <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
           <% if user_signed_in? %>
             <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>SIGN OUT<% end %></li>
+            <li class="nav-link text-center"><%= link_to  posts_path, class: 'nav-link', method: :get do %>VECKEN'S ROOM<% end %></li>
           <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
           <% end %>
