@@ -1,7 +1,17 @@
+<div class="post_wrapper">
+
 <div class="contents" >
-  <p><%= @name %>さんの投稿一覧</p>
-  <a class="btn" href="/posts">投稿一覧へ戻る</a>
+  <div class="post_name_top">
+    <span class="user_name_top">
+      <a href="/users/<%= current_user.id %>", class="post-name-link">
+      <%= fa_icon 'user-circle' %> <%= @name %></a></span> <span class="mypage_top_btn"><a href="/posts", class="logout-new-font-color"><%= fa_icon 'list-ul' %></a></span>
+
+      </a>
+    </span>
+  </div>
+
   <% @posts.each do |post| %>
     <%= render partial: "posts/post", locals: { post: post } %>  <% end %>
   <%= paginate(@posts) %>
+</div>
 </div>

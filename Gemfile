@@ -79,3 +79,5 @@ gem 'devise'
 gem 'font-awesome-rails'
 gem 'rspec-rails'
 gem 'devise-i18n'
+gem "font-awesome-rails"
+gem 'font-awesome-sass'

@@ -1,8 +1,26 @@
-<div class="image-center">
-<%= image_tag(post.image, class: "a") %>
+<div class="post_name_top">
+  <span class="name">
+    <a href="/users/<%= post.user_id %>", class="post-name-link">
+    <%= fa_icon 'user-plus' %> <span class="user_name_top"><%= post.user.name %></span>
+    </a>
+  </span>
 </div>
-<%= simple_format(post.text) %>
-<% if user_signed_in? && current_user.id == post.user_id %>
-<%= link_to "詳細", "/posts/#{post.id}", method: :get %>
-<%= link_to "編集", "/posts/#{post.id}/edit", method: :get %>
+<div class="image-center">
+<% if post[:image].present? %>
+<%= image_tag(post.image, class: "a") %>
+<% else %>
 <% end %>
+</div>
+<div class="post_text post-name-link">
+<%= fa_icon 'paragraph' %> <%= simple_format(post.text, {}, wrapper_tag: "span") %> 
+<% if user_signed_in? && current_user.id == post.user_id %>
+<div class="post_btns mr-2">
+  <h6 class="text-center col-1 post_btn1">
+    <div class=""><%= link_to "/posts/#{post.id}", method: :get, class: "post_btn_font" do %><%= fa_icon 'comment' %><% end %></div>
+  </h6>
+  <h6 class="text-center col-1 post_btn2">
+    <div class=""><%= link_to "/posts/#{post.id}/edit", method: :get, class: "post_btn_font" do %><%= fa_icon 'edit' %><% end %></div>
+  </h6>
+</div>
+<% end %>
+</div>
