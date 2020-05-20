@@ -1,6 +1,6 @@
-<div class ="contents">
-  <div class="content_post" style="background-image: url(<%= @post.image %>);">
-  </div>
+<div class="image-center">
+<%= image_tag @post.image, class: "a" %>
+</div>
     <%= simple_format(@post.text) %>
     <% if user_signed_in? && current_user.id == @post.user_id %>
       <div class="more">
@@ -21,7 +21,7 @@
       <a class="btn" href="/posts">投稿一覧へ戻る</a>
     </span>
      <div class="container"> 
-    <!-- ここからフォーム -->
+    <!-- ここからコメントフォーム -->
     <% if current_user %>
       <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
         <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
