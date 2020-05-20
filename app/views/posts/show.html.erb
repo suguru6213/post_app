@@ -42,7 +42,7 @@
     <!-- ここからコメントフォーム -->
     <% if current_user %>
       <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: "comment_form") do %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="1" class="submit_btn" required></textarea>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="1" class="submit_btn"></textarea>
         <input type="submit" value="&#xf055;" class="fa fa-2x post-name-link comment_submit_btn">
       <% end %>
     <% end %>
