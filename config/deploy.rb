@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.2"
+lock "~> 3.14.0"
 
 set :application, "post_app"
 set :repo_url, "git@github.com:suguru6213/post_app.git"
