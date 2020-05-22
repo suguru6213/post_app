@@ -30,11 +30,11 @@
       <nav class="navbar  w-100 nav-justified navbar-expand-sm navbar-light">
         <% if user_signed_in? %>
         <%= link_to destroy_user_session_path, method: :delete, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SIGN OUT<% end %>
-        <%= link_to posts_path, method: :get, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>VECKEN'S ROOM<% end %>
         <% else %>
         <%= link_to new_user_session_path, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %><%= fa_icon 'user' %><% end %>
         <% end %>
 
+        <%= link_to posts_path, method: :get, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>VECKEN'S ROOM<% end %>
         <%= link_to root_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>TOP<% end %>
         <%= link_to info_path, class: ' col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>INFO<% end %>
         <%= link_to schedule_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SCHEDULE<% end %>
@@ -54,10 +54,10 @@
             <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
           <% if user_signed_in? %>
             <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>SIGN OUT<% end %></li>
-            <li class="nav-link text-center"><%= link_to  posts_path, class: 'nav-link', method: :get do %>VECKEN'S ROOM<% end %></li>
           <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
           <% end %>
+            <li class="nav-link text-center"><%= link_to  posts_path, class: 'nav-link', method: :get do %>VECKEN'S ROOM<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>

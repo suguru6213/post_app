@@ -1,26 +1,41 @@
 <div class="post_name_top">
   <span class="name">
+    <% if user_signed_in? %>
     <a href="/users/<%= post.user_id %>", class="post-name-link">
-    <%= fa_icon 'user-plus' %> <span class="user_name_top"><%= post.user.name %></span>
+     <%= fa_icon 'user-plus' %> <span class="user_name_top"><%= post.user.name %></span>
     </a>
+    <% else %>
+    <div class= "post-name-link">
+   <%= fa_icon 'user-plus' %> <span class="user_name_top "><%= post.user.name %></span>
+   </div>
+    <% end %>
   </span>
 </div>
-<div class="image-center">
 <% if post[:image].present? %>
-<%= image_tag(post.image, class: "a") %>
+  <div class="image-center">
+    <%= image_tag(post.image, class: "a") %>
+  </div>
 <% else %>
 <% end %>
-</div>
 <div class="post_text post-name-link">
-<%= fa_icon 'paragraph' %> <%= simple_format(post.text, {}, wrapper_tag: "span") %> 
-<div class="post_btns mr-2">
-  <h6 class="text-center col-1 post_btn1">
-    <div class=""><%= link_to "/posts/#{post.id}", method: :get, class: "post_btn_font" do %><%= fa_icon 'comment' %><% end %></div>
-  </h6>
-<% if user_signed_in? && current_user.id == post.user_id %>
-  <h6 class="text-center col-1 post_btn2">
-    <div class=""><%= link_to "/posts/#{post.id}/edit", method: :get, class: "post_btn_font" do %><%= fa_icon 'edit' %><% end %></div>
-  </h6>
-</div>
-<% end %>
+  <%= fa_icon 'paragraph' %> <%= simple_format(post.text, {}, wrapper_tag: "span") %> 
+  <div class="post_btns mr-2">
+    <% if user_signed_in? && current_user.id == post.user_id %>
+    <h6 class="text-center col-1 post_btn1">
+      <div class="">
+        <%= link_to "/posts/#{post.id}", method: :get, class: "post_btn_font" do %>
+          <%= fa_icon 'comment' %>
+        <% end %>
+      </div>
+    </h6>
+      <h6 class="text-center col-1 post_btn2">
+       <div class="">
+          <%= link_to "/posts/#{post.id}/edit", method: :get, class: "post_btn_font" do %>
+            <%= fa_icon 'edit' %>
+          <% end %>
+        </div>
+      </h6>
+    <% end %>
+    
+  </div>
 </div>

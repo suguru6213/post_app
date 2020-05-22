@@ -1,4 +1,5 @@
 <div class="post_wrapper">
+<% if user_signed_in? && current_user.id == 1..2 %>
 <div class="room_btns_wrapper">
   <h6 class="text-center p-2 mt-3 col-1 mr-2 room_btn_color">
     <div class=""><%= link_to new_post_path, class: "logout-new-font-color" do %><%= fa_icon 'plus' %><% end %></div>
@@ -7,12 +8,20 @@
     <a href="/users/<%= current_user.id %>", class="logout-new-font-color"><%= fa_icon 'home' %></a>
   </h6>
 </div>
+<% end %>
 
 <div class="post_name_top">
   <span class="name">
+  <% if user_signed_in? %>
     <a href="/users/<%= @post.user_id %>", class="post-name-link">
     <%= fa_icon 'user-plus' %> <span class="user_name_top"><%= @post.user.name %></span>
     </a>
+  <% else %>
+    <div class= "post-name-link">
+   <%= fa_icon 'user-plus' %> <span class="user_name_top "><%= post.user.name %></span>
+   </div>
+
+  <% end %>
   </span>
 </div>
 
@@ -26,11 +35,11 @@
 
 <div class="post_text post-name-link">
 <%= fa_icon 'paragraph' %> <%= simple_format(@post.text, {}, wrapper_tag: "span") %> 
+<% if user_signed_in? && current_user.id == @post.user_id %>
 <div class="post_btns mr-2">
   <h6 class="text-center col-1 post_btn1">
     <div class=""><%= link_to "/posts/#{@post.id}", method: :get, class: "post_btn_font" do %><%= fa_icon 'comment' %><% end %></div>
   </h6>
-<% if user_signed_in? && current_user.id == @post.user_id %>
   <h6 class="text-center col-1 post_btn2">
     <div class=""><%= link_to "/posts/#{@post.id}", method: :delete, class: "post_btn_font" do %><%= fa_icon 'trash' %><% end %></div>
   </h6>
