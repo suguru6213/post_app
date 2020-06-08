@@ -28,13 +28,13 @@
     </div>
     <div class="container header-nav">
       <nav class="navbar  w-100 nav-justified navbar-expand-sm navbar-light">
-      <!--
         <% if user_signed_in? %>
         <%= link_to destroy_user_session_path, method: :delete, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SIGN OUT<% end %>
         <% else %>
         <%= link_to new_user_session_path, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %><%= fa_icon 'user' %><% end %>
         <% end %>
       
+      <!--
 
         <%= link_to posts_path, method: :get, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>VECKEN'S ROOM<% end %>
 
@@ -62,12 +62,12 @@
           <ul class="navbar-nav d-sm-none">
             <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
 
-        <!--
           <% if user_signed_in? %>
             <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>SIGN OUT<% end %></li>
           <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
           <% end %>
+        <!--
             <li class="nav-link text-center"><%= link_to  posts_path, class: 'nav-link', method: :get do %>VECKEN'S ROOM<% end %></li>
         -->
 
