@@ -28,21 +28,30 @@
     </div>
     <div class="container header-nav">
       <nav class="navbar  w-100 nav-justified navbar-expand-sm navbar-light">
+      <!--
         <% if user_signed_in? %>
         <%= link_to destroy_user_session_path, method: :delete, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SIGN OUT<% end %>
         <% else %>
         <%= link_to new_user_session_path, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %><%= fa_icon 'user' %><% end %>
         <% end %>
+      
 
         <%= link_to posts_path, method: :get, class: 'd-sm-inline d-none col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>VECKEN'S ROOM<% end %>
+
+      -->
+
         <%= link_to root_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>TOP<% end %>
         <%= link_to info_path, class: ' col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>INFO<% end %>
         <%= link_to schedule_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>SCHEDULE<% end %>
         <%= link_to profile_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>PROFILE<% end %>
         <%= link_to music_path, class: 'col-sm-1　justify-content-between top-bar-font mx-sm-4' do %>MUSIC<% end %>
         <%= link_to goods_path, class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>GOODS & JOB<% end %>
+
+      <!--
         <%= link_to art_path, class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>ART<% end %>
         <%= link_to vstyle_path, class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>STYLE<% end %>
+      -->
+
         <%= link_to 'https://twitter.com/1230Vecken', class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>TWITTER<% end %>
         <%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: "navbar-brand  col-sm-1 d-none d-sm-inline top-bar-font" do %>INSTAGRAM<% end %>
         <%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: "navbar-brand col-sm-1 d-none d-sm-inline top-bar-font" do %>YOUTUBE<% end %>
@@ -52,25 +61,35 @@
         <div id="menu" class="d-sm-none collapse navbar-collapse pb-4 mt-3">
           <ul class="navbar-nav d-sm-none">
             <button class="bg-light font-weight-light text-secondary" onclick="$('#menu').collapse('hide')">-CLOSE-</button>
+
+        <!--
           <% if user_signed_in? %>
             <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>SIGN OUT<% end %></li>
           <% else %>
             <li class="nav-link text-center"><%= link_to  new_user_session_path, class: 'nav-link' do %>SIGN IN & SIGN UP<% end %></li>
           <% end %>
             <li class="nav-link text-center"><%= link_to  posts_path, class: 'nav-link', method: :get do %>VECKEN'S ROOM<% end %></li>
+        -->
+
             <li class="nav-link text-center p-0"><%= link_to root_path, class: 'nav-link' do %>TOP<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to profile_path, class: 'nav-link' do %>PROFILE<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to info_path, class: 'nav-link' do %>INFORMATION<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to music_path, class: 'nav-link' do %>MUSIC<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to goods_path, class: 'nav-link' do %>GOODS & JOB<% end %></li>
+
+        <!--
             <li class="nav-link text-center p-0"><%= link_to art_path, class: 'nav-link' do %>ART<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to vstyle_path, class: 'nav-link' do %>STYLE<% end %></li>
+        -->
+
             <li class="nav-link text-center p-0"><%= link_to 'https://twitter.com/1230Vecken', class: 'nav-link' do %>TWITTER<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to 'https://www.instagram.com/vecken_1230_/?hl=ja', class: 'nav-link' do %>INSTAGRAM<% end %></li>
             <li class="nav-link text-center p-0"><%= link_to 'https://www.youtube.com/channel/UCvQKxZldgFnhwvwAgPbaWwQ', class: 'nav-link' do %>YOUTUBE<% end %></li>
+        <!--
           <% if user_signed_in? %>
             <li class="nav-link text-center"><%= link_to  destroy_user_session_path, class: 'nav-link', method: :delete do %>お問い合わせ<% end %></li>
           <% end %>
+        -->
 
           </ul>
         </div>
