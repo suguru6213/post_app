@@ -65,12 +65,20 @@
 }
 
 .rap-font {
-  font-size: 10px;
+  font-size: 15px;
+}
+
+.goods-link-font {
+    font-size: 18px;
+    color: blue;
+    border-bottom: solid 1px;
 }
 
 .rap-link-font {
-    font-size: 15px;
-    color: aquamarine;
+    font-size: 18px;
+    color: blue;
+    border-bottom: solid 1px;
+    letter-spacing: 0.5px;
 }
 
 .live-content-font {

@@ -1,19 +1,33 @@
-  <div class="post_wrapper">
+<div class="post_wrapper">
 
   <div class="border border-light mb-3">
 <br>
 
-  <h6 class="text-center border border-dark p-2 mt-2 col-5 mx-auto">JOB</h6>
+  <h6 class="text-center border border-dark p-2 mt-2 col-5 mx-auto">GOODS & JOB</h6>
 </div>
 
-<div class="container pt-5">
-  <div class="row">
-    <div class="col">
-      <%= image_tag 'vecken10.jpg', class: "d-block w-50 border border-dark" %>
-      <%= link_to 'https://coconala.com/services/1175689?pos=1&ref_kind=search&ref_sort=new&ref_no=1', class: "font-italic rap-link-font" do %>自己紹介RAP<% end %>
-      <p class="rap-font">あなたの自己紹介ラップ作ります！</p>
+  <div class="container pt-5">
+
+    <div class="row">
+      <div class="col-12 ">
+        <%= link_to 'https://suzuri.jp/1230Vecken', class: "font-italic goods-link-font" do %>
+              <%= image_tag 'vecken_goods_cat_tshirts.jpg', class: "d-block w-100  border border-dark" %>
+                GOODS
+        <% end %>
+        <p class="rap-font">Veckenオリジナルグッズ販売中</p>
+      </div>
     </div>
+    <div class="row mt-5">
+      <div class="col-12 mx-auto">
+        <%= link_to 'https://coconala.com/services/1175689?pos=1&ref_kind=search&ref_sort=new&ref_no=1', class: "font-italic rap-link-font" do %>
+          <%= image_tag 'vecken10.jpg', class: "d-block w-100  border border-dark" %>
+            自己紹介RAP
+        <% end %>
+        <p class="rap-font">あなたの自己紹介ラップ作ります！</p>
+      </div>
+    </div>
+
+    
   </div>
-</div>
 </div>
 
